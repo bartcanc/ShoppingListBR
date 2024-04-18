@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    // This plugin is used to create parcelable classes in easy and fast way
+    id("kotlin-parcelize")
+// This plugin is used to create safe args for navigation
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -32,6 +36,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures{
+        viewBinding = true
     }
 }
 
