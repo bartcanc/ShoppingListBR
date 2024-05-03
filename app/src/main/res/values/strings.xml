@@ -1,4 +1,37 @@
 <resources>
+    <string-array name="categories">
+        <item>Nabiał</item>
+        <item>Owoce</item>
+        <item>Warzywa</item>
+        <item>Słodkie przekąski</item>
+        <item>Słone przekąski</item>
+        <item>Napoje</item>
+        <item>Pieczywo</item>
+        <item>Produkty zbożowe</item>
+        <item>Mięso</item>
+        <item>Ryby</item>
+        <item>Wędliny</item>
+        <item>Jaja</item>
+        <item>Inne</item>
+    </string-array>
+
+    <string-array name="categories_main">
+        <item>Wszystkie</item>
+        <item>Nabiał</item>
+        <item>Owoce</item>
+        <item>Warzywa</item>
+        <item>Słodkie przekąski</item>
+        <item>Słone przekąski</item>
+        <item>Napoje</item>
+        <item>Pieczywo</item>
+        <item>Produkty zbożowe</item>
+        <item>Mięso</item>
+        <item>Ryby</item>
+        <item>Wędliny</item>
+        <item>Jaja</item>
+        <item>Inne</item>
+    </string-array>
+
     <string name="app_name">ShoppingListBR</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Add product details</string>

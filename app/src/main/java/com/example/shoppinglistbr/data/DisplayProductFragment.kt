@@ -28,7 +28,6 @@ class DisplayProductFragment : Fragment() {
         val product = args.product
         binding.displayTitle.text = product.title
         binding.displayCategory.text = product.category
-
         binding.displayQuantity.text = product.count.toString()
 
         binding.displayEdit.setOnClickListener {

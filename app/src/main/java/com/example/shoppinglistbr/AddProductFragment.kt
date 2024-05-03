@@ -25,8 +25,8 @@ class AddProductFragment : Fragment() {
 // Set the title and description EditText fields with the task to edit
 // (only if it's not null)
         binding.titleInput.setText(args.productToEdit?.title)
-        binding.typeInput.setText(args.productToEdit?.category)
-        binding.countInput.setText(args.productToEdit?.count.toString())
+        binding.typeInput.selectedItem.toString()
+        args.productToEdit?.let { binding.countInput.setText(it.count) }
         return binding.root
     }
 
@@ -38,7 +38,7 @@ class AddProductFragment : Fragment() {
 
     private fun saveProduct() {
         var title: String = binding.titleInput.text.toString()
-        var category: String = binding.typeInput.text.toString()
+        var category: String = binding.typeInput.selectedItem.toString()
         val count: String = binding.countInput.text.toString()
 
         if(title.isEmpty())

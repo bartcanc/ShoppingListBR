@@ -1,8 +1,9 @@
 package com.example.shoppinglistbr.data
 
+
+
 object Products {
     val list: MutableList<Product> = ArrayList()
-
     fun addProduct(product: Product) {
         list.add(product)
     }
