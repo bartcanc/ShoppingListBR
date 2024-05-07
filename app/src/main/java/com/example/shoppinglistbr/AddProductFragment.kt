@@ -41,6 +41,7 @@ class AddProductFragment : Fragment() {
         var category: String = binding.typeInput.selectedItem.toString()
         val count: String = binding.countInput.text.toString()
 
+
         if(title.isEmpty())
             title = getString(R.string.default_task_title) + "${Products.list.size + 1}"
         if(category.isEmpty())
@@ -50,7 +51,8 @@ class AddProductFragment : Fragment() {
             {title + category}.hashCode().toString(),
             title,
             category,
-            Integer.parseInt(count)
+            Integer.parseInt(count),
+            checked = false
         )
 // Add the new task to the list of tasks
         if(!args.edit){

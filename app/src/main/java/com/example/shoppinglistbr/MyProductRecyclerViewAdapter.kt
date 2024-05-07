@@ -3,6 +3,7 @@ package com.example.shoppinglistbr
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglistbr.data.Product
@@ -21,6 +22,7 @@ class MyProductRecyclerViewAdapter(
         val quantityView: TextView = binding.quantityView
         val categoryView: TextView = binding.categoryView
         val itemContainer: View = binding.root
+        val check: CheckBox = binding.content
         override fun toString(): String {
             return super.toString() + " '" + contentView.text + "'"
         }
@@ -45,6 +47,11 @@ class MyProductRecyclerViewAdapter(
         holder.contentView.text = product.title
         holder.quantityView.text = product.count.toString() + " sztuk"
         holder.categoryView.text = product.category
+        holder.check.isChecked = product.checked
+
+        holder.check.setOnClickListener {
+            product.checked = holder.check.isChecked
+        }
 
         holder.itemContainer.setOnClickListener {
             eventListener.onProductClick(position)

@@ -12,4 +12,5 @@ data class Product(
     val title: String,
     val category: String,
     val count: Int,
+    var checked: Boolean,
 ) : Parcelable
